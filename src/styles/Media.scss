@@ -1,0 +1,29 @@
+@import 'colors.scss';
+
+
+@media (min-width: 760px) {
+
+    //NAVBAR
+    nav>div>div>div>ul>button{
+        display: none;
+    }
+}
+@media (max-width: 760px) {
+
+    //NAVBAR
+    nav>div>div>div>ul>button{
+        display: block;
+        color: black;
+        font-weight: 400;
+        font-size: larger;
+        padding: 6px 25px;
+        background-color: white;
+        border: solid $green;
+        border-radius: 15px;
+    }
+
+    nav>div>div>button{
+        display: none;
+    }
+}
+

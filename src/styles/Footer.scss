@@ -1,0 +1,196 @@
+@import 'colors.scss';
+
+footer{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+        width: 90%;
+
+        >div{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 2rem;
+
+            h1{
+                font-size: 1.5rem;
+                margin-bottom: 1.7rem;
+            }
+            p{
+                color: gray;
+            }
+            a{
+                text-decoration: none;
+                color: gray;
+            }
+            li{
+                list-style: none;
+            }
+
+            @media (max-width: 750px) {
+                margin-top: 10%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.worktime{
+    width: 30%;
+    >.location{
+        width: 50%;
+        margin-bottom: 1rem;
+        @media (max-width: 750px){
+            text-align: center;
+        }
+
+        >p{
+            font-size: 1.25rem;
+
+            @media (max-width: 750px){
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 750px){
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    >.timing{
+        display: flex;
+        gap: 4rem;
+        @media (max-width: 750px){
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        >div{
+            >p{
+            font-size: 1.1rem;
+            }
+
+            @media (max-width: 750px){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    >.icons{
+        font-size: 1.5rem;
+        display: flex;
+        margin-top: 1rem;
+        gap: 1rem;
+
+        @media (max-width: 750px){
+            font-size: 1rem;
+            margin-top: .5rem;
+        }
+    }
+}
+
+.navigaton{
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 750px){
+        margin-top: 1.5rem;
+    }
+
+    >div{
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 750px){
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        >a{
+            font-size: 1.2rem;
+            color: black;
+            transition: 5ms;
+
+            &:hover{
+                color: $green;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.download-app{
+    
+    @media (max-width: 750px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    >div{
+        @media (max-width: 1000px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.lower-section{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgba(0, 0, 0, .2);
+    width: 100%;
+
+    
+    @media (max-width: 750px){
+        flex-direction: column-reverse;
+    }
+
+    >div{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        >p{
+            font-size: 1.25rem;
+            margin-top: 1rem;
+
+            >span{
+                color: black;
+            }
+        }
+    }
+}
+
+.to-top-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: $green;
+    color: white;
+    border-radius: 5px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,545 @@
+@import 'colors.scss';
+
+@import 'animation.scss';
+
+.details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    >.top-jeep{
+        margin-top: 4rem;
+        display: flex;
+        width: 80%;
+
+        @media (max-width: 1060px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 550px){
+            width: 95%;
+        }
+
+        >.lhs{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            animation: RevealRightNoScroll 1.5s ease-in-out;
+
+            @media (max-width: 1060px) {
+                margin-bottom: 3rem;
+                justify-content: center;
+                align-items: center;
+            }
+
+            >h1{
+                font-size: 4rem;
+
+                @media (max-width: 550px) {
+                    font-size: 2.5rem;
+                }
+            }
+
+            >p{
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                >span{
+                    color: $green;
+                }
+            }
+
+            
+            >.jeep-photo{
+                width: 85%;
+
+                >img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            >.lower-left{
+                height: 5rem;
+                width: 100%;
+                display: flex;
+                overflow: hidden;
+                @media (max-width: 1060px) {
+                    align-items: center;
+                }
+
+                >img{
+                    width: 7rem;
+                    object-fit: cover;
+                    margin-right: 2rem;
+                    border-radius: 15px;
+                    transition: .5s ease-in-out;
+
+                    @media (max-width: 420px){
+                        width: 5rem;
+                    }
+
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+
+        >.rhs{
+            display: flex;
+            flex-direction: column;
+            animation: RevealLeftNoScroll 1.5s ease-in-out;
+
+            >div{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                >p{
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+
+                @media (max-width: 550px){
+                    align-items: center;
+                }
+
+                >.tech-cards{
+                    display: flex;
+                    gap: 1rem;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-bottom: 1rem;
+
+                    >div{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 1rem;
+
+                        @media (max-width: 550px){
+                            flex-direction: column;
+                            align-items: center;
+                        }
+
+                        >div{
+                            display: flex;
+                            width: 10rem;
+                            margin-right: 1rem;
+                            margin-bottom: 1rem;
+                            flex-direction: column;
+                            align-items: baseline;
+                            border-radius: 20px;
+                            box-shadow: rgba(77, 77, 77, 0.15) 1.95px 1.95px 2.6px;
+
+                            @media (max-width: 550px){
+                                width: 50%;
+                            }
+
+                            >img{
+                                width: 3rem;
+                                height: 3rem;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+
+                >button{
+                    width: 50%;
+                    height: 4rem;
+                    border: none;
+                    background-color: $green;
+                    border-radius: 15px;
+                    color: white;
+                    font-weight: 400;
+                }
+
+                >.car-equipment{
+                    margin-top: 2rem;
+
+                    >h4{
+                        font-size: 1.8rem;
+                    }
+
+                    >div{
+                        width: 80%;
+                        margin-top: 2rem;
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 1rem;
+
+                        >div>p{
+                            font-size: 1.2rem;
+                            color: gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.unique-ways{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    >div{
+        display: flex;
+    }
+
+    >.unique-top{
+        width: 70%;
+        display: flex;
+        align-items: start;
+        justify-self: start;
+        margin-bottom: 2rem;
+
+        @media (max-width: 750px) {
+            width: 100%;
+        }
+    }
+
+    >.unique-bottom{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @media (max-width: 750px) {
+            flex-direction: column;
+        }
+
+        >.lhs{
+            width: 65%;
+            height: 30rem;
+            animation: RevealRight ease-in-out;
+            animation-timeline: view();
+
+            @media (max-width: 750px) {
+                width: 100%;
+            }
+
+            >img{
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                object-fit: cover;
+            }
+        }
+
+        >.rhs{
+            width: 35%;
+            height: 30rem;
+            background-color: $boxBackground;
+            border-radius: 15px;
+            animation: RevealLeft ease-in-out;
+            animation-timeline: view();
+
+
+            @media (max-width:1200px){
+                width: 100%;
+                margin: 0;
+                margin-right: 10%;
+            }
+            @media (max-width:770px){
+                margin: 0;
+            }
+
+            >div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 1rem 0 1rem;
+                align-items: center;
+                width: 100%;
+                height: 30rem;
+                color: white;
+                background-color: $boxBackground;
+                border-radius: 15px;
+
+                >div{
+                    width: 90%;
+                    height: 3rem;
+                    border-radius: 12px;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    background: none;
+                    >a{
+                        background-color: $lightBlue;
+                        border-radius: 5px;
+                        height: 2.5rem;
+                    }
+                }
+                >button{
+                    width: 80%;
+                    height: 3rem;
+                    font-weight: 500;
+                    color: white;
+                    background-color: $green;
+                    border-radius: 10px;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.mail{
+    >div{
+        color: white;
+        >p{
+            font-size: 1.5rem;
+            @media (max-width:770px){
+                font-size: 1.25rem;
+            }
+        }
+        >h1{
+        font-size: 3rem;
+        color: $green;
+        @media (max-width:770px){
+            font-size: 1.75rem;
+        }
+        }
+    }
+
+    @media (max-width:1200px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.time{
+    display: flex;
+    margin-top: 2rem;
+    gap: 3rem;
+    color: white;
+
+    >div{
+        display: flex;
+        flex-direction: column;
+
+        >p{
+            font-size: 1.5rem;
+        }
+    }
+    @media (max-width:1200px){
+        margin-bottom: 4rem;
+    }
+    
+    @media (max-width:770px){
+        margin-left: 1.5rem;
+    }
+}
+
+
+.lable-for-rent{
+    width: 50%;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+.book-date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-for-rent{
+    width: 50%;
+    >input[type = 'date']{
+        width: 100%;
+        background-color: $lightBlue;
+        border: none;
+        color: white;
+        height: 2.5rem;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+
+
+.showrooms{
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        @media (max-width:1200px) {
+            width: 75%;
+        }
+
+
+        >h1{
+            font-weight: 500;
+            font-size: 4rem;
+
+            @media (max-width:1200px){
+                font-size: 3rem;
+            }
+        }
+
+        >div{
+            margin-top: 5rem;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width:1200px) {
+                flex-direction: column;
+            }
+
+            >div{
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+                @media (max-width:1200px){
+                    width: 100%;
+                }
+
+                >div{
+                    display: flex;
+                    margin-bottom: 4rem;
+
+                    @media (max-width:1200px) {
+                        width: 100%;
+                    }
+                }
+
+                >iframe{
+                    height: 30rem;
+                    width: 100%;
+
+                    @media (max-width:1200px){
+                        height: 25rem;
+                    }
+                }
+            }
+
+            >.addresses{
+                width: 30%;
+                @media (max-width:1200px) {
+                    width: 100%;
+                }
+
+                
+                >div{
+                    border-bottom: 2px solid rgb(212, 212, 212);
+                    @media (max-width:1200px) {
+                        display: flex;
+                        align-items: center;
+                    }
+                    @media (max-width:370px){
+                        height: 19rem;
+                    }
+
+                    >h1{
+                        font-size: .25rem;
+                    }
+
+                    >div{
+                        height: 8rem;
+                        margin-right: 2rem;
+
+                        >img{
+                            @media (max-width:1200px) {
+                                height: 5rem;
+                                width: 5rem;
+                            }
+                            @media (max-width:370px){
+                                height: 3rem;
+                                width: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bottom-card{
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    >div{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 110lvh;
+
+        @media (max-width: 400px){
+            height: 125lvh;
+        }
+
+        >div{
+            width: 90%;
+            height: 100%;
+            background-color: $blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+
+            >div{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                gap: 3rem;
+
+                >img{
+                    width: 20%;
+                    height: 20%;
+                }
+
+                >h1{
+                    color: white;
+                    font-size: 3.5rem;
+
+                    @media (max-width: 680px) {
+                        font-size: 2.5rem;
+                    }
+
+                    >span{
+                        color: $green;
+                    }
+                }
+
+                >p{
+                    color: white;
+                    font-size: 1.2rem;
+
+                    @media (max-width: 480px){
+                        font-size: 1rem;
+                    }
+
+                    >span{
+                        color: $green;
+                    }
+                }
+
+                >h5{
+                    color: white;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
